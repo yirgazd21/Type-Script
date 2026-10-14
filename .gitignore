@@ -1,0 +1,11 @@
+# Compiled JS output
+*.js
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
