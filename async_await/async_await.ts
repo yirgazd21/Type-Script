@@ -112,26 +112,7 @@ async function fetchMultiple(): Promise<void> {
 }
 fetchMultiple();
 
-// ── Promise.allSettled — get result of all, even if some fail
-async function allSettledDemo(): Promise<void> {
-    const results = await Promise.allSettled([
-        fetchWithError(1),   // resolves
-        fetchWithError(-1),  // rejects
-        fetchWithError(3),   // resolves
-    ]);
 
-    results.forEach((result) => {
-        if (result.status === "fulfilled") {
-            console.log("OK:", result.value.fullName);
-        } else {
-            console.log("Failed:", result.reason.message);
-        }
-    });
-}
-allSettledDemo();
-// "OK: Abebe"
-// "Failed: Invalid ID"
-// "OK: Abebe"
 
 // ── Promise.race — first one to resolve/reject wins
 async function raceDemo(): Promise<void> {
