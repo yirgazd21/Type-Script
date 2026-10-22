@@ -10,12 +10,16 @@ let student1: Student = {
 
 // interface: describe an object
 interface Product {
+    id: number,
     name: string,
-    price: number
+    price: number,
+    inStock: boolean
 }
 let product1: Product = {
+    id: 1,
     name: "labtop",
-    price: 45000
+    price: 45000,
+    inStock: true
 }
 
 // union type:more than one type
